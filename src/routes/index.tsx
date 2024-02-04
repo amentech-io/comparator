@@ -7,6 +7,7 @@ export default function Home() {
   return (
     <main class="mx-auto text-gray-700 p-4">
       <form
+        class="flex flex-col gap-3 max-w-xl"
         onSubmit={async (e) => {
           e.preventDefault()
           // @ts-ignore
@@ -19,7 +20,8 @@ export default function Home() {
         }}
         method="post"
       >
-        <input class="border" type="text" name="duration" />
+        <input class="border" value="3" type="text" name="duration" placeholder="duration" />
+        <input class="border" value="2000-01-01" type="date" name="birthday" placeholder="date of birht" />
         <button type="submit" > submit </button>
       </form>
       <pre>
